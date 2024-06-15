@@ -56,7 +56,7 @@ export class TodoService {
   }
 
   async update(id: string, updateTodoDto: UpdateTodoDto) {
-    await this.collection.doc(id).update(updateTodoDto);
+    await this.collection.doc(id).update(updateTodoDto as any);
   }
 
   async remove(id: string) {
